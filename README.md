@@ -40,6 +40,8 @@ A chat app made by Flutter and Firebase.
 ## App architecture
 ### [MVVM](https://ja.wikipedia.org/wiki/Model_View_ViewModel)
 
+ソフトウェアアーキテクチャとは、抽象化と問題の分割によって複雑性を減らすことを主に念頭に置いたものである。
+
 ## How to run
 - 1 Clone this repo
 - 2 `flutter pub get`
