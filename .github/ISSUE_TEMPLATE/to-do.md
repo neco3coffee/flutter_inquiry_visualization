@@ -7,10 +7,12 @@ assignees: neco3coffee
 
 ---
 
-## ⏳
+## 達成したいStory
+- #
 
-## ✔️
+## 作業内容✔️
+- [ ] これやる
+- [ ] これやる
 
-## ⌛️
-
-## chromeのtabの状態(session buddy)
+## 参考サイト
+[ホゲホゲ](https://github.com/users/neco3coffee/projects/5/views/1)
