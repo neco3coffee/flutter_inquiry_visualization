@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-11T07:35:17.124Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" etag="y3KnivZmIymmHYea-Rkf" version="16.5.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-02-11T09:49:43.121Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36" etag="Z1FiSh225L3rJd3ef8oG" version="16.5.5" type="github" pages="2">
   <diagram name="activity図" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
     <mxGraphModel dx="1036" dy="2159" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -212,7 +212,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="w9lmVdIznDJNCZTNgYBh" name="data">
-    <mxGraphModel dx="2427" dy="2478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1935" dy="2075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="YwHavedRDH5448tyT3XH-0" />
         <mxCell id="YwHavedRDH5448tyT3XH-1" parent="YwHavedRDH5448tyT3XH-0" />
@@ -535,38 +535,70 @@
         <mxCell id="a-OW22vkWppSc-1S_k1F-43" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
           <mxGeometry x="310" y="-90" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-44" value="" style="endArrow=none;html=1;rounded=0;fontSize=11;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
+        <mxCell id="a-OW22vkWppSc-1S_k1F-44" value="質問する" style="endArrow=block;html=1;rounded=0;fontSize=11;endFill=1;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="360" y="-40" as="sourcePoint" />
             <mxPoint x="580" y="-40" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-46" value="Match" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="a-OW22vkWppSc-1S_k1F-44">
+        <mxCell id="a-OW22vkWppSc-1S_k1F-47" value="inquiryのstatusがmatchでなくなったら、inquiry_pageに自動遷移。&lt;br&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;align=left;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="628.5" y="680" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-48" value="caller" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="591.5" y="720" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-49" value="chat_pageで&lt;br&gt;解決した(solved)&lt;br&gt;or&lt;br&gt;分からん(unSolved)&lt;br&gt;を押したらinquiryのstatusを更新する。&lt;br&gt;&lt;br&gt;statusがmatchでなくなったら。&lt;br&gt;thank_you_pageに自動遷移" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;align=left;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="100" y="680" width="190" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-50" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="300" y="720" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-51" value="" style="endArrow=block;html=1;rounded=0;fontSize=11;endFill=1;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="345" y="730.0000000000002" as="sourcePoint" />
+            <mxPoint x="565" y="730.0000000000002" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-52" value="解決した" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="a-OW22vkWppSc-1S_k1F-51">
           <mxGeometry x="0.1338" y="-4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-47" value="inquiryのstatusがmatchでなくなったら、inquiry_pageに自動遷移。&lt;br&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;align=left;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
-          <mxGeometry x="630" y="600" width="220" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-48" value="caller" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
-          <mxGeometry x="593" y="600" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-49" value="chat_pageで&lt;br&gt;解決した(solved)&lt;br&gt;or&lt;br&gt;分からん(unSolved)&lt;br&gt;を押したらinquiryのstatusを更新する。&lt;br&gt;&lt;br&gt;statusがmatchでなくなったら。&lt;br&gt;thank_you_pageに自動遷移" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;align=left;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
-          <mxGeometry x="100" y="600" width="190" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-50" value="user" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
-          <mxGeometry x="300" y="600" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-51" value="" style="endArrow=none;html=1;rounded=0;fontSize=11;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
+        <mxCell id="a-OW22vkWppSc-1S_k1F-54" value="答える" style="endArrow=none;html=1;rounded=0;fontSize=11;endFill=0;startArrow=block;startFill=1;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="350" y="650.0000000000002" as="sourcePoint" />
-            <mxPoint x="570" y="650.0000000000002" as="targetPoint" />
+            <mxPoint x="360" y="-20.619999999999997" as="sourcePoint" />
+            <mxPoint x="580" y="-20.619999999999997" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="a-OW22vkWppSc-1S_k1F-52" value="Solve" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="a-OW22vkWppSc-1S_k1F-51">
+        <mxCell id="a-OW22vkWppSc-1S_k1F-55" value="wait" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="265" y="-230" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-56" value="match" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="414" y="-100" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-57" value="solved" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="419" y="670" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-58" value="unSolved" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;strokeColor=#000000;" vertex="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry x="419" y="790" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-59" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=11;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-160" y="-140" as="sourcePoint" />
+            <mxPoint x="-160" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-62" value="" style="endArrow=block;html=1;rounded=0;fontSize=11;endFill=1;" edge="1" parent="YwHavedRDH5448tyT3XH-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="345" y="770" as="sourcePoint" />
+            <mxPoint x="565" y="770" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-OW22vkWppSc-1S_k1F-63" value="分からん" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;" vertex="1" connectable="0" parent="a-OW22vkWppSc-1S_k1F-62">
           <mxGeometry x="0.1338" y="-4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
