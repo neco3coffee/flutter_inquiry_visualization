@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inquiry_visualization/routes/app_pages.dart';
+import 'package:flutter_inquiry_visualization/theme/theme_data.dart';
 import 'package:get/get.dart';
 
 void main() async {
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
       defaultTransition: Transition.fade,
       getPages: AppPages.routes,
       title: 'Flutter GetX Boilerplate',
-      // theme: ThemeConfig.lightTheme,
+      theme: ThemeConfig.lightTheme,
     );
   }
 }
