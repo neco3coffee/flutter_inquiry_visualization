@@ -9,8 +9,6 @@ import 'package:get/get.dart';
 part 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.AUTH;
-
   static final routes = [
     GetPage(
       name: Routes.AUTH,
