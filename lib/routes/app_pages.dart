@@ -1,35 +1,40 @@
-// import 'package:flutter_getx_boilerplate/modules/auth/auth.dart';
-// import 'package:flutter_getx_boilerplate/modules/home/home.dart';
-// import 'package:flutter_getx_boilerplate/modules/me/cards/cards_screen.dart';
-// import 'package:flutter_getx_boilerplate/modules/modules.dart';
-// import 'package:get/get.dart';
+import 'package:flutter_inquiry_visualization/modules/auth/auth_page.dart';
+import 'package:flutter_inquiry_visualization/modules/chat/chat_page.dart';
+import 'package:flutter_inquiry_visualization/modules/create_account/create_account_page.dart';
+import 'package:flutter_inquiry_visualization/modules/edit_account/edit_account_page.dart';
+import 'package:flutter_inquiry_visualization/modules/home/home_page.dart';
+import 'package:flutter_inquiry_visualization/modules/inquiry/inquiry_page.dart';
+import 'package:get/get.dart';
 
-// part 'app_routes.dart';
+part 'app_routes.dart';
 
-// class AppPages {
-//   static const INITIAL = Routes.SPLASH;
+class AppPages {
+  static const INITIAL = Routes.AUTH;
 
-//   static final routes = [
-//     GetPage(
-//       name: Routes.SPLASH,
-//       page: () => SplashScreen(),
-//       binding: SplashBinding(),
-//     ),
-//     GetPage(
-//       name: Routes.AUTH,
-//       page: () => AuthScreen(),
-//       binding: AuthBinding(),
-//       children: [
-//         GetPage(name: Routes.REGISTER, page: () => RegisterScreen()),
-//         GetPage(name: Routes.LOGIN, page: () => LoginScreen()),
-//       ],
-//     ),
-//     GetPage(
-//         name: Routes.HOME,
-//         page: () => HomeScreen(),
-//         binding: HomeBinding(),
-//         children: [
-//           GetPage(name: Routes.CARDS, page: () => CardsScreen()),
-//         ]),
-//   ];
-// }
+  static final routes = [
+    GetPage(
+      name: Routes.AUTH,
+      page: () => AuthPage(),
+    ),
+    GetPage(
+      name: Routes.CREATEACCOUNT,
+      page: () => CreateAccountPage(),
+    ),
+    GetPage(
+      name: Routes.HOME,
+      page: () => HomePage(),
+    ),
+    GetPage(
+      name: Routes.EDITACCOUNT,
+      page: () => EditAccountPage(),
+    ),
+    GetPage(
+      name: Routes.INQUIRY,
+      page: () => InquiryPage(),
+    ),
+    GetPage(
+      name: Routes.CHAT,
+      page: () => ChatPage(),
+    ),
+  ];
+}
