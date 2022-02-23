@@ -18,4 +18,22 @@ class AccountRepository {
         .doc(account.callerId)
         .set(account.toJson());
   }
+
+  Future<User?> getUser(String uid) async {
+    final _user = await _firestore.collection('users').doc(uid).get();
+    if (_user.data() != null) {
+      return User.fromJson(_user.data()!);
+    } else {
+      return null;
+    }
+  }
+
+  Future<Caller?> getCaller(String uid) async {
+    final _caller = await _firestore.collection('callers').doc(uid).get();
+    if (_caller.data() != null) {
+      return Caller.fromJson(_caller.data()!);
+    } else {
+      return null;
+    }
+  }
 }
