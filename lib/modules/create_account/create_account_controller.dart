@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inquiry_visualization/models/caller.dart';
 import 'package:flutter_inquiry_visualization/models/user.dart' as model;
+import 'package:flutter_inquiry_visualization/modules/home/home_page.dart';
 import 'package:flutter_inquiry_visualization/repository/account_repository.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
@@ -59,6 +60,6 @@ class CreateAccountController extends GetxController {
       );
       await _accountRepo.createCaller(_account);
     }
-    Get.toNamed('/home');
+    Get.offAll(const HomePage());
   }
 }

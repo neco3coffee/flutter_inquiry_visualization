@@ -19,7 +19,7 @@ class CreateAccountPage extends StatelessWidget {
         title: Text('アカウント作成'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(26),
+        padding: const EdgeInsets.all(26),
         child: Obx(
           () => Column(
             mainAxisSize: MainAxisSize.min,
