@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inquiry_visualization/modules/auth/auth_page.dart';
-import 'package:flutter_inquiry_visualization/modules/home/home_controller.dart';
+import 'package:flutter_inquiry_visualization/modules/common/auth/auth_page.dart';
+import 'package:flutter_inquiry_visualization/modules/common/home/home_controller.dart';
 import 'package:flutter_inquiry_visualization/shared/constants/gen/assets.gen.dart';
+import 'package:flutter_inquiry_visualization/shared/widgets/caller_bottom_navigation.dart';
+import 'package:flutter_inquiry_visualization/shared/widgets/user_bottom_navigation.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -65,6 +67,11 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             )),
+      ),
+      bottomNavigationBar: Obx(
+        () => ctl.user != null
+            ? const UserNavigationBar(UserNavigator.home)
+            : const CallerNavigationBar(CallerNavigator.home),
       ),
     );
   }

@@ -16,7 +16,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.AUTH,
+      initialRoute: CommonRoutes.AUTH,
       defaultTransition: Transition.fade,
       getPages: AppPages.routes,
       title: 'Flutter GetX Boilerplate',
