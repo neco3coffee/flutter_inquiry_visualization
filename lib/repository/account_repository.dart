@@ -36,4 +36,14 @@ class AccountRepository {
       return null;
     }
   }
+
+  Stream<List<Caller>> getCallerStream() {
+    return _firestore
+        .collection('callers')
+        .where('isOnline', isEqualTo: true)
+        .snapshots()
+        .map(
+          (e) => e.docs.map((e) => Caller.fromJson(e.data())).toList(),
+        );
+  }
 }
