@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter_inquiry_visualization/models/caller.dart';
 import 'package:flutter_inquiry_visualization/models/user.dart';
-import 'package:flutter_inquiry_visualization/modules/create_account/create_account_page.dart';
+import 'package:flutter_inquiry_visualization/modules/common/create_account/create_account_page.dart';
 import 'package:flutter_inquiry_visualization/repository/account_repository.dart';
 import 'package:flutter_inquiry_visualization/routes/app_pages.dart';
 import 'package:get/get.dart';

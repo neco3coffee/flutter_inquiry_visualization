@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_inquiry_visualization/modules/create_account/create_account_controller.dart';
+import 'package:flutter_inquiry_visualization/modules/common/create_account/create_account_controller.dart';
 import 'package:flutter_inquiry_visualization/shared/constants/colors.dart';
 import 'package:flutter_inquiry_visualization/shared/constants/gen/assets.gen.dart';
 import 'package:get/get.dart';

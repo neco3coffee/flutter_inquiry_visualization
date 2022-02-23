@@ -1,9 +1,6 @@
-import 'package:flutter_inquiry_visualization/modules/auth/auth_page.dart';
-import 'package:flutter_inquiry_visualization/modules/chat/chat_page.dart';
-import 'package:flutter_inquiry_visualization/modules/create_account/create_account_page.dart';
-import 'package:flutter_inquiry_visualization/modules/edit_account/edit_account_page.dart';
-import 'package:flutter_inquiry_visualization/modules/home/home_page.dart';
-import 'package:flutter_inquiry_visualization/modules/inquiry/inquiry_page.dart';
+import 'package:flutter_inquiry_visualization/modules/common/auth/auth_page.dart';
+import 'package:flutter_inquiry_visualization/modules/common/create_account/create_account_page.dart';
+import 'package:flutter_inquiry_visualization/modules/common/home/home_page.dart';
 import 'package:get/get.dart';
 
 part 'app_routes.dart';
@@ -11,28 +8,16 @@ part 'app_routes.dart';
 class AppPages {
   static final routes = [
     GetPage(
-      name: Routes.AUTH,
+      name: CommonRoutes.AUTH,
       page: () => AuthPage(),
     ),
     GetPage(
-      name: Routes.CREATEACCOUNT,
+      name: CommonRoutes.CREATEACCOUNT,
       page: () => CreateAccountPage(),
     ),
     GetPage(
-      name: Routes.HOME,
+      name: CommonRoutes.HOME,
       page: () => HomePage(),
-    ),
-    GetPage(
-      name: Routes.EDITACCOUNT,
-      page: () => EditAccountPage(),
-    ),
-    GetPage(
-      name: Routes.INQUIRY,
-      page: () => InquiryPage(),
-    ),
-    GetPage(
-      name: Routes.CHAT,
-      page: () => ChatPage(),
     ),
   ];
 }
