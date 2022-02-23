@@ -10,6 +10,7 @@ class ColorConstants {
   static Color darkGray = Color(0xFF9F9F9F);
   static Color black = Color(0xFF000000);
   static Color white = Color(0xFFFFFFFF);
+  static Color defaultText = hexToColor('#222831');
 }
 
 Color hexToColor(String hex) {
