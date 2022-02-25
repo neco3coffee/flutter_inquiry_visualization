@@ -13,7 +13,7 @@ Inquiry _$InquiryFromJson(Map<String, dynamic> json) => Inquiry(
       content: json['content'] as String,
       isUserTyping: json['isUserTyping'] as bool,
       isCallerTyping: json['isCallerTyping'] as bool,
-      status: json['status'] as int,
+      status: $enumDecode(_$InquiryStatusEnumMap, json['status']),
       answer: json['answer'] as String?,
       createdAt: DateTime.parse(json['createdAt'] as String),
       startedAt: json['startedAt'] == null
@@ -31,9 +31,17 @@ Map<String, dynamic> _$InquiryToJson(Inquiry instance) => <String, dynamic>{
       'content': instance.content,
       'isUserTyping': instance.isUserTyping,
       'isCallerTyping': instance.isCallerTyping,
-      'status': instance.status,
+      'status': _$InquiryStatusEnumMap[instance.status],
       'answer': instance.answer,
       'createdAt': instance.createdAt.toIso8601String(),
       'startedAt': instance.startedAt?.toIso8601String(),
       'finishedAt': instance.finishedAt?.toIso8601String(),
     };
+
+const _$InquiryStatusEnumMap = {
+  InquiryStatus.wait: 'wait',
+  InquiryStatus.match: 'match',
+  InquiryStatus.solve: 'solve',
+  InquiryStatus.unSolve: 'unSolve',
+  InquiryStatus.later: 'later',
+};

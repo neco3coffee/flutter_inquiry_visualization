@@ -5,8 +5,8 @@ part 'user.g.dart';
 @JsonSerializable()
 class User {
   /// The generated code assumes these values exist in JSON.
-  final String userId;
-  final String name;
+  String userId;
+  String name;
 
   /// The generated code below handles if the corresponding JSON value doesn't
   /// exist or is empty.

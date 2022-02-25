@@ -6,17 +6,17 @@ part 'inquiry.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Inquiry {
   /// The generated code assumes these values exist in JSON.
-  final String inquiryId;
-  final User user;
-  final String? callerId;
-  final String content;
-  final bool isUserTyping;
-  final bool isCallerTyping;
-  final int status;
-  final String? answer;
-  final DateTime createdAt;
-  final DateTime? startedAt;
-  final DateTime? finishedAt;
+  String inquiryId;
+  User user;
+  String? callerId;
+  String content;
+  bool isUserTyping;
+  bool isCallerTyping;
+  InquiryStatus status;
+  String? answer;
+  DateTime createdAt;
+  DateTime? startedAt;
+  DateTime? finishedAt;
 
   /// The generated code below handles if the corresponding JSON value doesn't
   /// exist or is empty.
@@ -43,3 +43,5 @@ class Inquiry {
   /// Connect the generated [_$UserToJson] function to the `toJson` method.
   Map<String, dynamic> toJson() => _$InquiryToJson(this);
 }
+
+enum InquiryStatus { wait, match, solve, unSolve, later }
