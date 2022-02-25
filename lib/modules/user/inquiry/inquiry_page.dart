@@ -45,6 +45,27 @@ class InquiryPage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                     ),
                   ),
+                if (ctl.inquiries != null)
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: ctl.inquiries!.length, // この行を追加
+                      itemBuilder: (BuildContext context, int index) {
+                        return CircleAvatar(
+                          child: Assets.images.vector.image(),
+                          backgroundColor: Colors.transparent,
+                          radius: 30,
+                        );
+                      },
+                      scrollDirection: Axis.vertical,
+                    ),
+                  ),
+                SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                    '只今の質問者数: ${ctl.inquiries != null ? ctl.inquiries!.length : 0}人',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 const Gap(20),
                 ElevatedButton(
                   onPressed: () => showModalBottomSheet(

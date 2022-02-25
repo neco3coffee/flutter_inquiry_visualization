@@ -11,4 +11,13 @@ class InquiryRepository {
         (transaction) async => transaction.set(document, inquiry.toJson()));
     // await _firestore.collection('inquiries').doc().set(inquiry.toJson());
   }
+
+  Stream<List<Inquiry>> getWaitInquiryStream() {
+    return _firestore
+        .collection('inquiries')
+        .where('status', isEqualTo: 'wait')
+        .orderBy('createdAt')
+        .snapshots()
+        .map((e) => e.docs.map((e) => Inquiry.fromJson(e.data())).toList());
+  }
 }

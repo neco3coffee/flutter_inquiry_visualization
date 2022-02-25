@@ -19,12 +19,16 @@ class InquiryController extends GetxController {
   final _user = Rxn<User>(null);
   User? get user => _user.value;
 
+  final _inquiries = Rxn<List<Inquiry>>(null);
+  List<Inquiry>? get inquiries => _inquiries.value;
+
   final _content = ''.obs;
   String get content => _content.value;
 
   @override
   void onInit() async {
     _callers.bindStream(_accountRepo.getCallerStream());
+    _inquiries.bindStream(_inquiryRepo.getWaitInquiryStream());
     _user.value = await _accountRepo.getUser(_auth.currentUser!.uid);
     super.onInit();
   }
