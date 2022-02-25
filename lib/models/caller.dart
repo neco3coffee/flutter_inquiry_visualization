@@ -5,9 +5,9 @@ part 'caller.g.dart';
 @JsonSerializable()
 class Caller {
   /// The generated code assumes these values exist in JSON.
-  final String callerId;
-  final String name;
-  final bool isOnline;
+  String callerId;
+  String name;
+  bool isOnline;
 
   /// The generated code below handles if the corresponding JSON value doesn't
   /// exist or is empty.
