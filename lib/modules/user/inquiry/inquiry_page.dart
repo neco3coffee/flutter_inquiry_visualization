@@ -48,11 +48,11 @@ class InquiryPage extends StatelessWidget {
                 const Gap(20),
                 ElevatedButton(
                   onPressed: () => showModalBottomSheet(
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(20))),
                     context: context,
-                    builder: (context) => _inquiryInputSheet(context),
+                    builder: (context) => _inquiryInputSheet(context, ctl),
                     isScrollControlled: true,
                   ),
                   child: Text('質問する'),
@@ -64,7 +64,8 @@ class InquiryPage extends StatelessWidget {
     );
   }
 
-  Widget _inquiryInputSheet(BuildContext context) => Padding(
+  Widget _inquiryInputSheet(BuildContext context, InquiryController ctl) =>
+      Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -100,13 +101,16 @@ class InquiryPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     gapPadding: 10.0),
               ),
+              onChanged: ctl.setContent,
             ),
             const Gap(20),
             Padding(
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  ctl.createInquiry();
+                },
                 child: Text('質問を登録する'),
               ),
             )
